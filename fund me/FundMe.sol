@@ -5,8 +5,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.30;
 
-contract FundMe{
+contract FundMe {
+    uint256 public minimumUSD = 5;
     function fund() public payable {
-        require(msg.value > 1e18);
+        require(msg.value > minimumUSD);
+    }
+
+    function getPrice() public {
+        // address - 0x694AA1769357215DE4FAC081bf1f309aDC325306
+        // ABI
+
     }
 }
